@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Feet to Meters Length Converter</title>
+<style>
+body {
+    color:snow;
+    background-color:slategrey;
+    text-align: center;
+  }
+</style>
+<body>
+
+<h2>Metric/Freedom Converter</h2>
+<p>Type a number in the field to convert:</p>
+
+<p>
+  <label>Miles</label>
+  <input id="inputMiles" type="number" placeholder="Miles" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+    Kilometers: <span id="outputKilometers"></span></p>
+<p>
+    <label>Pounds</label>
+    <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+    Kilograms: <span id="outputKilograms"></span>
+</p>
+<p>
+    <label>Kilometers</label>
+    <input id="inputKilometers" type="number" placeholder="Kilometers" oninput="LengthConverter2(this.value)" onchange="LengthConverter2(this.value)">
+    Miles: <span id="outputMiles"></span></p>
+<p>
+    <label>Kilograms</label>
+    <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter2(this.value)" onchange="weightConverter2(this.value)">
+    Pounds: <span id="outputPounds"></span>
+</p>
+
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputKilometers").innerHTML=valNum*1.609;
+}
+
+function weightConverter(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/2.205;
+}
+function LengthConverter2(valNum) {
+  document.getElementById("outputMiles").innerHTML=valNum/1.609;
+}
+
+function weightConverter2(valNum) {
+  document.getElementById("outputPounds").innerHTML=valNum*2.205;
+}
+</script>
+</body>
+</html>
+
